@@ -172,7 +172,7 @@ public class GameManager : MonoBehaviour
             clickedCell.ChangeValue(1);
             NextTurn();
         }
-        if (CanAttackCell(clickedCell, currentPlayerId))
+        else if (CanAttackCell(clickedCell, currentPlayerId))
         {
             clickedCell.Attack(1, currentPlayerId);
             NextTurn();
@@ -283,4 +283,5 @@ public class GameManager : MonoBehaviour
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(0);
     }
+
 }
